@@ -1,0 +1,60 @@
+@charset 'UTF-8';
+
+header, .navbar {
+    background: rgba(0, 0, 0, 0.5);
+    margin-bottom: 70px; /* Adicione margem na parte inferior da barra de navegação */
+}
+
+#nav-container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#logo {
+    width: 75px;
+    margin-left: 15px;
+}
+
+.navbar-brand {
+    padding: 0;
+    color: #fff;
+}
+
+.navbar-brand:hover {
+    color: #fff;
+}
+
+#navbar-links a {
+    color: #fff;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 1rem .8rem;
+    font-size: 18px; /* Tamanho da fonte dos links da barra de navegação */
+}
+
+
+/* Estilo do hamburguer */
+.navbar-toggler-icon {
+    font-family: 'Font Awesome 6 Free';
+    content: '\f0c9'; /* Use o código Unicode do ícone desejado */
+
+
+}
+
+.navbar-toggler {
+border: none; /* Remover a borda padrão do botão */
+}
+
+.navbar-toggler:focus {
+outline: none; /* Remover a borda de foco quando o botão é clicado */
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+background-color: #ccc; /* Mudar a cor do ícone ao passar o mouse */
+}
+
+/*
+MUDAR O BODY PARA PRETO MESMO
+PARA O MENU FICAR COERENTE E BONITINHO IGUAL O INDEX.HTML
+*/

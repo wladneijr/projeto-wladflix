@@ -1,0 +1,167 @@
+@charset 'UTF-8';
+
+/* Estilos Gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    margin: 0; /* Remova as margens padrão do corpo */
+    padding: 0;
+}
+
+/* Barra de navegação */
+header, .navbar {
+    background-color: black;
+    margin-bottom: 70px; /* Adicione margem na parte inferior da barra de navegação */
+}
+
+#nav-container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#logo {
+    width: 75px;
+    margin-left: 15px;
+}
+
+.navbar-brand {
+    padding: 0;
+    color: #fff;
+}
+
+.navbar-brand:hover {
+    color: #fff;
+}
+
+#navbar-links a {
+    color: #fff;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 1rem .8rem;
+    font-size: 18px; /* Tamanho da fonte dos links da barra de navegação */
+}
+
+/* Slider */
+.container-fluid {
+    padding: 0;
+}
+
+#mainSlider .carousel-inner, #mainSlider .carousel-item {
+    height: 90vh;
+}
+
+#mainSlider .carousel-caption {
+    top: 30%;
+    background: rgba(0, 0, 0, 0.5); /* Fundo com transparência para melhor legibilidade do texto */
+    padding: 20px;
+    border-radius: 10px; /* Cantos arredondados para a caixa de texto */
+}
+
+#mainSlider .carousel-caption h2 {
+    font-size: 36px; /* Tamanho da fonte do título */
+    margin-bottom: 20px;
+}
+
+#mainSlider .carousel-caption p {
+    font-size: 18px; /* Tamanho da fonte do texto */
+    font-weight: 400; /* Peso da fonte regular */
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.main-btn {
+    background-color: red;
+    color: #fff;
+    text-transform: uppercase;
+    width: 200px;
+    height: 60px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 3px solid transparent;
+    transition: .5s;
+    text-decoration: none;
+    display: inline-block; /* Tornar o botão inline para alinhamento adequado */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    font-weight: 700; /* Peso da fonte em negrito */
+}
+
+.main-btn:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent;
+    border-color: red;
+}
+
+/* Estilo do hamburguer */
+.navbar-toggler-icon {
+        font-family: 'Font Awesome 6 Free';
+        content: '\f0c9'; /* Use o código Unicode do ícone desejado */
+    
+    
+}
+
+.navbar-toggler {
+    border: none; /* Remover a borda padrão do botão */
+}
+
+.navbar-toggler:focus {
+    outline: none; /* Remover a borda de foco quando o botão é clicado */
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+    background-color: #ccc; /* Mudar a cor do ícone ao passar o mouse */
+}
+
+/* Estilo do texto do main */
+.main-text {
+    padding: 70px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+
+@media(max-width: 768px) {
+
+    .container {
+        padding: 20px 0;
+    }
+
+    #mainSlider .carousel-inner, #mainSlider .carousel-item{
+        height: auto;
+    }
+
+    #mainSlider .carousel-caption h2{
+        font-size: 28px;
+    }
+
+    #mainSlider .carousel-caption p {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+}
+
+@media(max-width: 425px) {
+
+    #mainSlider {
+        margin-top: 90px;
+
+    }
+
+    #mainSlider .carousel-caption{
+        top: 5%;
+    }
+
+    #mainSlider .carousel-caption h2{
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    #mainSlider .carousel-caption p{
+        display: none;
+    }
+
+    .carousel-caption .main-btn{
+        font-size: 14px;
+    }
+}

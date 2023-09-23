@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wladflix - Assista Agora</title>
+
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Bootstrap js-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+
+    <!--ProgressBbar js-->
+    <script src="js/progressbar.min.js"></script>
+
+    <!--Parallax-->
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+</head>
+
+<body  style="background-color: white;">
+    <header>
+        <div class="container" id="nav-container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <a href="#" class="navbar-brand">
+                    <img src="midia/imagens/WLADFLIX-09-09-2023.png" alt="WladFlix" id="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
+                    aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+                    <div class="navbar-nav">
+                        <a href="index.html" class="nav-item nav-link" id="home-menu">Home</a>
+                        <a href="about.html" class="nav-item nav-link" id="about-menu">Sobre</a>
+                        <a href="entrar.html" class="nav-item nav-link" id="account-menu">Entrar</a>
+                        <a href="stream-now.html" class="nav-item nav-link" id="stream-now-menu">Assista agora</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+        <main>
+            <section class="py-5">
+                <div class="container">
+                    <h1 class="display-4 text-dark">Assine Agora</h1>
+                    <p class="lead text-dark">Tenha acesso ilimitado aos melhores filmes e séries. Assine a
+                        <strong>Wladflix</strong> hoje mesmo e comece a sua jornada de entretenimento.</p>
+    
+                    <!-- Formulário de Inscrição -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="email" class="form-label text-dark">Informe seu email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Seu email">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Assinar Agora</button>
+                    </form>
+                </div>
+            </section>
+            <section style="padding: 70px;">
+                <h2 class="display-4 text-dark">Benefícios em Destaque:</h2>
+                <p class="lead text-dark">Variedade de Conteúdo: Explore uma vasta biblioteca de filmes épicos, séries premiadas e documentários fascinantes.</p>
+    
+                <p class="lead text-dark">Transmissão em Qualidade HD: Desfrute de uma qualidade de imagem excepcional em todos os dispositivos.</p>
+    
+                <p class="lead text-dark">Assista em Qualquer Lugar: Transmita seus programas favoritos em qualquer lugar, seja no seu celular, tablet, laptop ou TV.</p>
+    
+                <p class="lead text-dark">Cancelamento Flexível: Assine hoje e cancele quando quiser, sem contratos a longo prazo.</p>
+    
+                <h2>Por que escolher a Wladflix:</h2>
+                <p class="lead text-dark">Na Wladflix, estamos comprometidos em proporcionar experiências cinematográficas incríveis para nossos assinantes. Nossa missão é tornar o entretenimento acessível a todos, sem comprometer a qualidade. Com uma equipe dedicada e uma biblioteca em constante crescimento, a Wladflix é a escolha número um para entusiastas do cinema em todo o mundo.</p>
+    
+                <p class="lead text-dark">Pronto para começar a sua jornada? Assine hoje mesmo e mergulhe em um mundo de histórias emocionantes e momentos inesquecíveis. Sua jornada de entretenimento começa aqui na Wladflix!</p>
+            </section>
+        </main>
+        <script>
+            $(document).ready(function () {
+                // Navegação suave
+                $("a.nav-link").on("click", function (event) {
+                    if (this.hash !== "") {
+                        event.preventDefault();
+    
+                        var hash = this.hash;
+    
+                        $("html, body").animate(
+                            {
+                                scrollTop: $(hash).offset().top
+                            },
+                            800, // Velocidade da animação em milissegundos
+                            function () {
+                                window.location.hash = hash;
+                            }
+                        );
+                    }
+                });
+    
+                $(window).scroll(function () {
+                    var scrollDistance = $(window).scrollTop();
+    
+                    // Atualizar a classe 'active' nos links do menu conforme a rolagem
+                    $(".section").each(function (i) {
+                        if ($(this).position().top <= scrollDistance) {
+                            $(".navbar-nav a.active").removeClass("active");
+                            $(".navbar-nav a")
+                                .eq(i)
+                                .addClass("active");
+                        }
+                    });
+                });
+    
+                // Código JavaScript para mostrar/esconder o menu hamburguinho
+                $('.navbar-toggler').click(function () {
+                    $('.navbar-collapse').toggleClass('show');
+                });
+    
+                // Fechar o menu quando um link for clicado
+                $('.navbar-nav a').click(function () {
+                    $('.navbar-collapse').removeClass('show');
+                });
+            });
+        </script>
+</body>
+
+</html>
